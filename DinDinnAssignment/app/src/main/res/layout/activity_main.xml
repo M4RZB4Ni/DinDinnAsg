@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+
+
+    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        app:indicatorMargin="290dp"
+        android:id="@+id/carousel"
+        app:showBottomShadow="false"
+        app:showCaption="false"
+        app:showIndicator="true"
+        app:autoPlay="true"
+        app:showNavigationButtons="false"
+        app:autoPlayDelay="1000"
+        app:showTopShadow="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:textSize="@dimen/dimen_25sp"
+        android:textColor="@color/white"
+        android:id="@+id/mTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loading"
+        />
+
+
+
+    <include layout="@layout/layout_persistent_bottom_sheet" />
+
+    <LinearLayout
+        android:translationZ="8dp"
+        android:layout_gravity="right|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <com.andremion.counterfab.CounterFab
+        android:visibility="invisible"
+        app:layout_anchorGravity="right|bottom"
+        android:layout_gravity="bottom|right"
+        android:id="@+id/mCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:badgePosition="RightTop"
+        android:background="@color/black"
+        app:badgeBackgroundColor="@color/flat_green_1"
+        app:badgeTextColor="@color/white"
+        android:src="@drawable/ic_baseline_shopping_cart_24"
+        app:backgroundTint="@color/white"
+        android:layout_margin="16dp" />
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
